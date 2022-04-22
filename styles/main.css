@@ -44,7 +44,7 @@ li
     text-align: center;
 }
 
-@media only screen and (max-width: 45ch) {
+@media only screen and (max-width: 65ch) {
     /* For desktop: */
     main
     {
