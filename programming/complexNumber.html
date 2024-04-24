@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Zene - Complex Numbers</title>
+		<link rel="stylesheet" href="../styles/main.css">
+		<link rel="stylesheet" href="../styles/pages.css">
+	</head>
+	<body>
+        <a id="backButton" href="./index.html">&ltBack&gt</a>
+        
+		<header>
+			<h1>Complex Number Visualiser</h1>
+			<span class="sidenote">Report any problems on <a href="https://github.com/Me222282/Me003Website">GitHub</a></span>
+			<hr />
+		</header>
+
+		<main>
+            <section class="columns">
+                <p>
+                    This is a program to help visualise how complex numbers work in functions and equations.
+                    It extensivly uses my graphics library, including the 3D graphics and lighting parts.
+                    It has multiple methods for visualising the output, as it would normally require 4 dimensions.
+                    The program can also accept multiple input equations for in use as parameteric equations.
+                    In 2 equation parametric, the X equation controls the X and Z with the real and imaginary outputs respectivly, and the Y equation mapped to the Y coordinate as usual.
+                    In 3 equation parametric, the X, Y and Z equations control the X, Y and Z outputs through the selected mode.
+                    <br/><br/>
+                    The image shown to the right shows a sample of the output from tan(x), where the X and Z dimensions are real and imaginary numbers respectivly, and the Y is the modulus (magnitude) of the output number (<i>1</i>).
+                    Other visual options include: The real component (<i>2</i>); The imaginary component (<i>3</i>); Sum of real and imaginary magnitudes (<i>4</i>); and Argument (angle) of output (<i>5</i>).
+                    <br/><br/>
+                    The program starts with a terminal, where "Q" exits, "S" selects single equation, "P" selects 2 equation parameteric, "3" selects 3 equation parameteric.
+                    Then enter the equations in terms of x for each option, and the window starts with those loaded.
+                    A blue unit cube is rendered at the origin for a reference of position and scale.
+                    <br/><br/>
+                    The control scheme:
+                    <br/>
+                    <span><b>Esc</b> - Exit to terminal;</span>
+                    <span><b>WASD, Ctrl, Space</b> - Move;</span>
+                    <span><b>LShift</b> - 4 * speed;</span>
+                    <span><b>RShift</b> - 0.25 * speed;</span>
+                    <span><b>Alt</b> - 10 * speed;</span>
+                    <span><b>Q</b> - 100 * speed;</span>
+                    <span><b>Tab</b> - Toggle full screen;</span>
+                    <span><b>BSP</b> - Rest position and rotation;</span>
+                    <span><b>Shift + M</b> - Toggle lighting material;</span>
+                    <span><b>M</b> - Toggle mouse;</span>
+                    <span><b>V</b> - Cycle through modes;</span>
+                    <span><b>F</b> - Switch wire frame and full rendering;</span>
+                    <span><b>B + =/-</b> - Increase/decrease depth map size;</span>
+                    <span><b>Shift + =/-</b> - Increase/decrease plane size range;</span>
+                    <span><b>=/-</b> - Increase/decrease precision;</span>
+                    <span><b>C</b> - Toggle colour gradient;</span>
+                    <span><b>L</b> - Toggle 3D lighting;</span>
+                    <span><b>R</b> - Auto rotate light source;</span>
+                    <span><b>Shift Scroll</b> - Change render distance;</span>
+                    <span><b>Scroll</b> - Change field of view;</span>
+                    <br/><br/>
+                    <a href="https://github.com/Me222282/ComplexNumbers">Source code</a>
+                    <br/><br/>
+                    Download binaries: <a href="">Windows</a>, <a href="">Linux</a>
+                </p>
+                <img class="small" src="../thumbnails/complexNumbers.png" />
+            </section>
+            <hr class="small"/>
+            <section class="flex">
+                <div class="image-block">
+                    <img class="extra-small" src="./images/tanWL.png" />
+                    <span class="small">tan(x) in mode 4 with lighting</span>
+                </div>
+                <div class="image-block">
+                    <img class="extra-small" src="./images/sinTanhCos.png" />
+                    <span class="small">Parametric sin(x) and tanh(x)cos(x) in mode 1</span>
+                </div>
+                <div class="image-block">
+                    <img class="extra-small" src="./images/lnTanh.png" />
+                    <span class="small">ln(tanh(x)) in mode 1</span>
+                </div>
+                <div class="image-block">
+                    <img class="extra-small" src="./images/polynomial.png" />
+                    <span class="small">4x^3-7x^2+15x-9 in mode 5 with lighting</span>
+                </div>
+            </section>
+		</main>
+	</body>
+</html>

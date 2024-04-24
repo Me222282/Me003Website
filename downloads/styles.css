@@ -1,0 +1,11 @@
+ul
+{
+    /* unordered lists have default margin and padding */
+    margin: 0;
+    padding: 0;
+}
+li
+{
+    list-style: none;
+    text-align: center;
+}

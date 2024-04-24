@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Zene - Lasers</title>
+		<link rel="stylesheet" href="../styles/main.css">
+		<link rel="stylesheet" href="../styles/pages.css">
+	</head>
+	<body>
+        <a id="backButton" href="./index.html">&ltBack&gt</a>
+        
+		<header>
+			<h1>Lasers Program</h1>
+			<span class="sidenote">Report any problems on <a href="https://github.com/Me222282/Me003Website">GitHub</a></span>
+			<hr />
+		</header>
+
+		<main>
+            <section class="columns">
+                <p>
+                    This is a program that simulates individual rays of light that reflect and refract off of objects in the scene.
+                    It uses my graphics and GUI library, however I have not utilised much of GUI aspect.
+                    I am planning on implementing menus for adding objects to the scene and changing their properties, but have not got round to doing this yet.
+                    So at the moment, there are 4 objects which can be randomly changed.
+                    <br/><br/>
+                    I got my inspiration for this project from some youtube video, and thought it would be a interesting project to work on.
+                    Another main reason I worked on this was to help visualise lenses and image casting, but so far I have not managed to implement a lens object.
+                    Originally it used a bitmap to cast the rays, but I replaced this with a geometric implementation as it allowed for more accuracy and finer detail, and I found that the performance cost was not that much.
+                    <br/><br/>
+                    The control scheme:
+                    <br/>
+                    <span><b>Esc</b> - Close program;</span>
+                    <span><b>C</b> - Reset view;</span>
+                    <span><b>R</b> - Regenerate random objects;</span>
+                    <span><b>B</b> - Add or remove bounds;</span>
+                    <span><b>S</b> - Make laser automatically spin;</span>
+                    <span><b>Space</b> - Laser points to mouse;</span>
+                    <span><b>Middle Mouse</b> - Pan view;</span>
+                    <span><b>Scroll</b> - Zoom;</span>
+                    <span><b>Ctrl Scroll</b> - Change laser length;</span>
+                    <br/><br/>
+                    <a href="https://github.com/Me222282/Lasers">Source code</a>
+                    <br/><br/>
+                    Download binaries: <a href="">Windows</a>, <a href="">Linux</a>
+                </p>
+                <img class="small" src="../thumbnails/lasers.png" />
+            </section>
+            <hr class="small"/>
+            <section>
+                <ul class="flex">
+                    <li>
+                        <div class="fix-dumb-css">
+                            <span>Mirror line objects:</span>
+                            <img class="extra-small" src="./images/LineMirror.png" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fix-dumb-css">
+                            <span>Mirror box objects:</span>
+                            <img class="extra-small" src="./images/BoxMirror.png" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fix-dumb-css">
+                            <span>Mirror circle objects:</span>
+                            <img class="extra-small" src="./images/CircleMirror.png" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fix-dumb-css">
+                            <span>Glass box objects:</span>
+                            <img class="extra-small" src="./images/GlassBox.png" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fix-dumb-css">
+                            <span>Absorb line objects:</span>
+                            <img class="extra-small" src="./images/LineAbsorb.png" />
+                        </div>
+                    </li>
+                </ul>
+            </section>
+		</main>
+	</body>
+</html>
