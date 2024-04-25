@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Zene - Synthesiser Modules</title>
+		<link rel="stylesheet" href="../styles/main.css">
+		<link rel="stylesheet" href="../styles/pages.css">
+	</head>
+	<body>
+		<a id="backButton" href="../index.html">&ltBack&gt</a>
+        
+		<header>
+			<h1>Synthesiser Modules</h1>
+			<span class="sidenote">Report any problems on <a href="https://github.com/Me222282/Me003Website">GitHub</a></span>
+			<hr />
+		</header>
+
+		<main>
+			<section class="flex">
+				<h3><a href="./index.html">About</a></h3>
+				<h3><a href="./modules.html"><em>Modules</em></a></h3>
+				<h3><a href="./buildProcess.html">The Build Process</a></h3>
+				<h3><a href="./finalProduct.html">The Final Product</a></h3>
+			</section>
+			<hr class="small" />
+			<section>
+				<p>
+					I made the decision to build the modules on stripboard instead of custome PCBs, but this has lead to the build process taking longer, and the modules construction to be a little sloppy.
+					However I would not have got as far into construction if I had to find a company to print PCBS, and get them made. It would also have costed a lot more.
+					<br/><br/>
+					Nearly all modules have what is called voltage control, which means parameters in the module can be controlled by an external voltage input.
+					This is very common of modular synthesisers and is a core part in how you use it and construct different sounds.
+					<br/><br/>
+				</p>
+				<strong>Module list:</strong>
+				<ul>
+					<li class="hList"><a href="#vco">VCO</a></li>
+					<li class="hList"><a href="#vclfo">VCLFO</a></li>
+					<li class="hList"><a href="#vcm">VCM</a></li>
+					<li class="hList"><a href="#vcf">VCF</a></li>
+					<li class="hList"><a href="#vcsvf">VCSVF</a></li>
+					<li class="hList"><a href="#vca">VCA</a></li>
+					<li class="hList"><a href="#vceg">VCEG</a></li>
+					<li class="hList"><a href="#midi">MIDI</a></li>
+					<li class="hList"><a href="#mixer">Stereo Mixer</a></li>
+					<li class="hList"><a href="#drf">DRF</a></li>
+					<li class="hList"><a href="#mfeg">MFEG</a></li>
+					<li class="hList"><a href="#comp">Compressor</a></li>
+					<li class="hList"><a href="#splashback">Tripple Splashback</a></li>
+					<li class="hList"><a href="#rm">RM</a></li>
+					<li class="hList"><a href="#wf">Wave Folder</a></li>
+					<li class="hList"><a href="#reverb">Reverb</a></li>
+					<li class="hList"><a href="#io">Output</a></li>
+					<li class="hList"><a href="#fx">Effect</a></li>
+					<li class="hList"><a href="#volt">Voltage</a></li>
+					<li class="hList"><a href="#amp">Op Amp</a></li>
+					<li class="hList"><a href="#sh">S&H / Noise</a></li>
+					<li class="hList"><a href="#clock">Clock</a></li>
+					<li class="hList"><a href="#split">Split</a></li>
+					<li class="hList"><a href="#filter">Filter</a></li>
+					<li class="hList"><a href="#lfo">Quad LFO</a></li>
+					<li class="hList"><a href="#mix">Mix</a></li>
+				</ul>
+			</section>
+			<hr class="small"/>
+			<section id="vco">
+				<h2>VCO</h2>
+				<div class="columns">
+					<p>
+						VCO stands for Voltage Controlled Oscillator.
+						It has both pitch and frequency control, and outputs Saw, Triangle, Sine and Pulse waves (with Pulse Width Modulation).
+						There is also Hard and Soft Sync, which allow for the cycle in the oscilation to be reset with an input pulse.
+						<br/><br/>
+						This design is mostly unchanged from the orignal, but some have a multiturn potentiometer for the pitch, and I tweaked how the PWM control functions slightly.
+						<br/><br/>
+						There are 10 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="vclfo">
+				<h2>VCLFO</h2>
+				<div class="columns">
+					<p>
+						The VCLFO module is the same as the VCO module, but its oscillation range has been shifted to lower frequencies, hence the LF in VCLFO.
+						I added a switch to bring the range back up to VCO levels, so that it can be used as one if needed.
+						<br/><br/>
+						There are 4 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="vcm">
+				<h2>VCM</h2>
+				<div class="columns">
+					<p>
+						VCM stands for Voltage Controlled Mixer.
+						It has 4 channels, with overall gain and panning.
+						I have not modified the function of this module at all, except for increasing the output gain as I found that it was a little quiet.
+						<br/><br/>
+						There are 2 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="vcf">
+				<h2>VCF</h2>
+				<div class="columns">
+					<p>
+						VCF stands for Voltage Controlled Filter.
+						There are 4 types of these in the synthesiser: Low Pass, High Pass, Band Pass, and Phase Shift.
+						Low pass means that high frequencies are taken away, and low ones let through.
+						High pass is the opposite. Band pass is a combination of both low pass and high pass, such that only a band of frequencies around the cutoff is let through, and everything else is taken away.
+						Phase shift means that the effective phase of the oscillation sent through is changed.
+						The phase shift can also be changed into a notch filter, which is the opposite of a band pass.
+						<br/><br/>
+						It has voltage control over both the cutoff frequency and resonance (feedback).
+						I only made slight changes to this design, so mostly follows the original.
+						The phase shift however has a few more modifications, adding the notch mode and a self oscillating mode.
+						<br/><br/>
+						There are 2 of each of these in the synthesiser.<br/>
+						Downloads for Low Pass:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+						<br/>
+						Downloads for High Pass:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+						<br/>
+						Downloads for Band Pass:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+						<br/>
+						Downloads for Phase Shift:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="vcsvf">
+				<h2>VCSVF</h2>
+				<div class="columns">
+					<p>
+						The VCSVF module.
+						<br/><br/>
+						There are 2 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="vca">
+				<h2>VCA</h2>
+				<div class="columns">
+					<p>
+						VCA stands for Voltage Controlled Amplifier.
+						The volume fo the input signal is changed based upon the control voltage.
+						It is mainly used in conjuction with an <a href="#vceg">Envelope Generator</a>, to turn on and off notes on the instrument.
+						<br/><br/>
+						There are 3 + 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+						<br/>
+						Downloads for larger version:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="vceg">
+				<h2>VCEG</h2>
+				<div class="columns">
+					<p>
+						The VCEG module.
+						<br/><br/>
+						There are 2 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="midi">
+				<h2>MIDI</h2>
+				<div class="columns">
+					<p>
+						The MIDI module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="mixer">
+				<h2>Stereo Mixer</h2>
+				<div class="columns">
+					<p>
+						The Stereo Mixer module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="drf">
+				<h2>DRF</h2>
+				<div class="columns">
+					<p>
+						The DRF module.
+						<br/><br/>
+						There are 2 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="mfeg">
+				<h2>MFEG</h2>
+				<div class="columns">
+					<p>
+						The MFEG module.
+						<br/><br/>
+						There are 3 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="comp">
+				<h2>Compressor</h2>
+				<div class="columns">
+					<p>
+						The Compressor module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="splashback">
+				<h2>Tripple Splashback</h2>
+				<div class="columns">
+					<p>
+						The Tripple Splashback module is a design by <a href="">LOOK MUM NO COMPUTER</a>, with the additions made by <a href="">Some squirrel</a>.
+						<br/><br/>
+						There are 1 + 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+						<br/>
+						Downloads for dual version:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="rm">
+				<h2>RM</h2>
+				<div class="columns">
+					<p>
+						The RM module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="wf">
+				<h2>Wave Folder</h2>
+				<div class="columns">
+					<p>
+						The Wave Folder module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="reverb">
+				<h2>Reverb</h2>
+				<div class="columns">
+					<p>
+						The Reverb module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="io">
+				<h2>Output</h2>
+				<div class="columns">
+					<p>
+						The Output module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="fx">
+				<h2>Effect</h2>
+				<div class="columns">
+					<p>
+						The Effect module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="volt">
+				<h2>Voltage</h2>
+				<div class="columns">
+					<p>
+						The Voltage module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="amp">
+				<h2>Op Amp</h2>
+				<div class="columns">
+					<p>
+						The Op Amp module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="sh">
+				<h2>S&H / Noise</h2>
+				<div class="columns">
+					<p>
+						The S&H / Noise module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="clock">
+				<h2>Clock</h2>
+				<div class="columns">
+					<p>
+						The Clock module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="split">
+				<h2>Split</h2>
+				<div class="columns">
+					<p>
+						The Split module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="filter">
+				<h2>Filter</h2>
+				<div class="columns">
+					<p>
+						The Filter module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="lfo">
+				<h2>Quad LFO</h2>
+				<div class="columns">
+					<p>
+						The Quad LFO module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+			<hr class="small"/>
+			<section id="mix">
+				<h2>Mix</h2>
+				<div class="columns">
+					<p>
+						The Mix module.
+						<br/><br/>
+						There is 1 of these in the synthesiser.<br/>
+						Downloads:
+						<a href="./downloads/" download>Schematic</a>,
+						<a href="./downloads/" download>Stripboard Layout</a>,
+						<a href="./downloads/" download>Panel Design</a>
+					</p>
+					<img class="extra-small" src="rdf"/>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
