@@ -21,7 +21,7 @@ header > h1
 {
     margin-bottom: 0;
 }
-header > .sidenote
+.sidenote
 {
     display: block;
     margin-top: 0;
