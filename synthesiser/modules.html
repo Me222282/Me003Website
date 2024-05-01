@@ -33,6 +33,9 @@
 					Nearly all modules have what is called voltage control, which means parameters in the module can be controlled by an external voltage input.
 					This is very common of modular synthesisers and is a core part in how you use it and construct different sounds.
 					<br/><br/>
+					<s>The downloads contain both images and the original files.</s> I used <a href="https://www.kicad.org/">KiCad</a> for the schematics, and <a href="https://www.schaeffer-ag.de/fpd-doc/en/index.htm?fpd_welcome_frontpld.htm">Front Panel Designer</a> for the panel layouts.
+					<i>(info about reading stripboard layouts)</i>
+					<br/><br/>
 				</p>
 				<strong>Module list:</strong>
 				<ul>
@@ -226,7 +229,7 @@
 				<h2>MIDI</h2>
 				<div class="columns">
 					<p>
-						The MIDI module is one of the only digital modules in the synthesiser.
+						The MIDI module is one of the only digital modules in the synthesiser, and fully designed by myself.
 						It takes in a MIDI input and outputs 5 channels of CV and gate.
 						There are options to change how the 5 channels are allocated (number of voices and MIDI channels).
 						You can also change how far the pitch bend goes, and octave offsets to the pitch.
@@ -346,6 +349,7 @@
 						RM stands for Ring Modulation.
 						Ring modulation is very similar to amplitude modulation, where the ampltiude of one signal controls the volume of another, however ring modulation also works when the amplitude is negative.
 						It is essentially multiplying the 2 input voltages together to form the output.
+						The design of this module is unchanged, however I added 2 more circuits for a total of 4 isolated multipliers.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -380,7 +384,11 @@
 				<h2>Reverb</h2>
 				<div class="columns">
 					<p>
-						The Reverb module.
+						The reverb module is a spring reverb design by myself.
+						Spring reverb is a reverberation enumation technique that uses coil driven springs to send the signal through.
+						Pickup coils at the other end receive the reverberated signal, which is amplified and mixed with the original to control the amount of reverb.
+						I deceided not to use the reverb design that the original Digisoun 80 used, as the ICs would have been espicially difficult to source, and I find that spring reverb sounds better that digital simuation.
+						I used a few sources for inspiration and basic designs, including <a href="https://sound-au.com/articles/reverb.htm">this one by Rod Elliott</a>, <a href="sedrfg">and some others</a>.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -396,7 +404,9 @@
 				<h2>Output</h2>
 				<div class="columns">
 					<p>
-						The Output module.
+						The Output module is more of an IO (Input Output) module, and another one design by myself.
+						It contains a 1W speaker driver for cabinates or headphones, and a stereo line out.
+						The module also contains 2 inputs, that accept line or instrument signals with a gain range of 0.5 to ~∞.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -412,7 +422,9 @@
 				<h2>Effect</h2>
 				<div class="columns">
 					<p>
-						The Effect module.
+						The Effect module is another IO module, but is designed more for a round trip send and receive.
+						It can be used as another dual line in and dual line out, but is has controls to mix in the input with the outgoing signal.
+						This was mainly designed so that I could use guitar effect pedals with the synthesiser.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -428,7 +440,9 @@
 				<h2>Voltage</h2>
 				<div class="columns">
 					<p>
-						The Voltage module.
+						The Voltage module is a fixed voltage source.
+						It has 4 seperate outputs, with a rotary switch to select from 0V - 9V outputs.
+						There is then also a control to add an offset ranging 0V - 1V to the base.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -444,7 +458,8 @@
 				<h2>Op Amp</h2>
 				<div class="columns">
 					<p>
-						The Op Amp module.
+						The Op Amp module is more of a voltage subtractor module.
+						It contains 5 isolated circuits, and a gain control on the output.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -460,7 +475,11 @@
 				<h2>S&H / Noise</h2>
 				<div class="columns">
 					<p>
-						The S&H / Noise module.
+						S&H stands for Sample and Hold.
+						Upon every input pulse, the voltage at the signal input is sampled, and remains the output voltage until the next pulse.
+						This module also contains a noise source, which has a white, pink and blue output.
+						The schematic for this follows the original closely, but I added 3 more S&H circuits for a total of 4 within the module.
+						I also moved the clock source circuit to its own <a href="#clock">module</a>.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -476,7 +495,8 @@
 				<h2>Clock</h2>
 				<div class="columns">
 					<p>
-						The Clock module.
+						The Clock module is 5 clock pulse sources, with individual controllable pulse rates.
+						It is designed to be mainly used as the clock input on the <a href="#sh">S&H</a> module, but does not have to be.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -492,12 +512,12 @@
 				<h2>Split</h2>
 				<div class="columns">
 					<p>
-						The Split module.
+						The Split module has no circuit.
+						It is a collection of input jacks that are shorted together in groups.
+						The use of this is to split an output so that it can be sent to multiple locations.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
-						<a href="./downloads/" download>Schematic</a>,
-						<a href="./downloads/" download>Stripboard Layout</a>,
 						<a href="./downloads/" download>Panel Design</a>
 					</p>
 					<img class="extra-small" src="rdf"/>
@@ -508,7 +528,10 @@
 				<h2>Filter</h2>
 				<div class="columns">
 					<p>
-						The Filter module.
+						The Filter module is 5 static, single pole, low pass filters.
+						There is only a control to change the cutoff frequency, so no feedback / resonance.
+						This module was designed mainly to add glide to the keyboard, so would be used in conjuction with the <a href="#midi">MIDI</a> module and <a href="#vco">VCO</a> modules.
+						However it can be used as a normal audio low pass filter if nessassary.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
