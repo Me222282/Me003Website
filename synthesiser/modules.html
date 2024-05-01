@@ -164,7 +164,9 @@
 				<h2>VCSVF</h2>
 				<div class="columns">
 					<p>
-						The VCSVF module.
+						VCSVF stands for Voltage Controlled Stage Variable Filter.
+						This is the same as the <a href="#vcf">VCF</a> module, but it has the option to change its filter function.
+						The original design used the CEM 3335 IC, but there is no replacment for that, so I modified the schematic to use the AS 3330 IC.
 						<br/><br/>
 						There are 2 of these in the synthesiser.<br/>
 						Downloads:
@@ -183,6 +185,9 @@
 						VCA stands for Voltage Controlled Amplifier.
 						The volume fo the input signal is changed based upon the control voltage.
 						It is mainly used in conjuction with an <a href="#vceg">Envelope Generator</a>, to turn on and off notes on the instrument.
+						<br/><br/>
+						Each VCA module includes 2 seperate VCA circuits.
+						However to save some space, one VCA module includes 4 circuits within the same panel space, but this makes it quite cramped.
 						<br/><br/>
 						There are 3 + 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -203,7 +208,9 @@
 				<h2>VCEG</h2>
 				<div class="columns">
 					<p>
-						The VCEG module.
+						VCEG stands for Voltage Controled Envelope Generator.
+						This module creates the Attack, Decay, Sustain, and Release stages of each note.
+						It is mainly used to as the control voltage input on <a href="#vca">VCAs</a> or <a href="#vcf">VCFs</a>.
 						<br/><br/>
 						There are 2 of these in the synthesiser.<br/>
 						Downloads:
@@ -219,7 +226,12 @@
 				<h2>MIDI</h2>
 				<div class="columns">
 					<p>
-						The MIDI module.
+						The MIDI module is one of the only digital modules in the synthesiser.
+						It takes in a MIDI input and outputs 5 channels of CV and gate.
+						There are options to change how the 5 channels are allocated (number of voices and MIDI channels).
+						You can also change how far the pitch bend goes, and octave offsets to the pitch.
+						There are switches to change note priorities when the maximum selected voices has been reached.
+						It also has outputs for velecity and the modulation wheel.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -235,7 +247,10 @@
 				<h2>Stereo Mixer</h2>
 				<div class="columns">
 					<p>
-						The Stereo Mixer module.
+						The Stereo Mixer module is a 3/6 channel mixer.
+						You can mix either 3 stereo channels, or 6 mono channels.
+						There are indicator LEDs for peaking 10Vpp.
+						This schematic was not part of the original Digisound 80.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -251,7 +266,11 @@
 				<h2>DRF</h2>
 				<div class="columns">
 					<p>
-						The DRF module.
+						DRF stands for Dual Resonance Filter.
+						It is a 2 channel parallel band pass filter that can also mix with the original signal.
+						Each band pass filter has voltage control over the frequency and peak volume.
+						I made some small modifications to the schematic of these.
+						There are also pre-patched connections between the 2 modules to allow for a single Quad channel filter instead.
 						<br/><br/>
 						There are 2 of these in the synthesiser.<br/>
 						Downloads:
@@ -267,7 +286,9 @@
 				<h2>MFEG</h2>
 				<div class="columns">
 					<p>
-						The MFEG module.
+						MFEG stands for Multi-Function Envolope Generator.
+						It is very similar to the <a href="#vceg">VCEG</a>, but does not have voltage control over the envolope timings.
+						It contains 2 independent EGs, and the response of the decay and release has 3 selectable modes.
 						<br/><br/>
 						There are 3 of these in the synthesiser.<br/>
 						Downloads:
@@ -283,7 +304,9 @@
 				<h2>Compressor</h2>
 				<div class="columns">
 					<p>
-						The Compressor module.
+						The Compressor module schematic was designed by <a href="https://www.youtube.com/@MoritzKlein0">Moritz Klein</a>.
+						A compressor suppresses the volume of a signal when it reaches a certain point.
+						I made one change to this design by adding a mixable sidechain signal into the input of the suppressing circuit.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -320,7 +343,9 @@
 				<h2>RM</h2>
 				<div class="columns">
 					<p>
-						The RM module.
+						RM stands for Ring Modulation.
+						Ring modulation is very similar to amplitude modulation, where the ampltiude of one signal controls the volume of another, however ring modulation also works when the amplitude is negative.
+						It is essentially multiplying the 2 input voltages together to form the output.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
@@ -336,7 +361,10 @@
 				<h2>Wave Folder</h2>
 				<div class="columns">
 					<p>
-						The Wave Folder module.
+						A wave folder is a type of saturation, but instad of hard clipping at the peak amplitude, it folds back at the peak voltage line.
+						This circuit contains 2 independent circuits, each with 2 wave folding stages, and gain imbetween then.
+						This is another schematic designed by <a href="https://www.youtube.com/@MoritzKlein0">Moritz Klein</a>.
+						I one main modification by adding the VCA design used in his <a href="#comp">Compressor</a> modules, to have voltage contrlo over the input gain.
 						<br/><br/>
 						There is 1 of these in the synthesiser.<br/>
 						Downloads:
