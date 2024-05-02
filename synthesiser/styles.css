@@ -1,0 +1,31 @@
+.p50
+{
+    width: 50%;
+}
+
+img.width
+{
+    width: 11rem;
+    border: 3px solid purple;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.hide
+{
+    display: none;
+}
+
+@media only screen and (max-width: 110ch)
+{
+    /* For desktop: */
+    .hide
+    {
+        display: block;
+    }
+    
+    .p50
+    {
+        width: 100%;
+    }
+}
