@@ -1,19 +1,42 @@
-.p50
+.grid-item
 {
-    width: 50%;
+    border-bottom: 1.5px solid lightgray;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    flex-grow: 1;
+    margin: 0px 0px 0.5em 0px;
+    padding: 0px 0.2em 0.5em 0.2em;
+    border-style: inset;
 }
 
 img.width
 {
-    width: 11rem;
+    height: 33rem;
     border: 3px solid purple;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: auto;
+    padding: 0px;
 }
 
 .hide
 {
     display: none;
+}
+
+p
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+p.small
+{
+    max-width: 40ch;
+}
+
+.wrap
+{
+    width: 95%;
+    margin: auto;
 }
 
 @media only screen and (max-width: 110ch)

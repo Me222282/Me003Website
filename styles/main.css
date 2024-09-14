@@ -28,6 +28,11 @@ header > h1
     font-style: italic;
 }
 
+p
+{
+    max-width: 70em;
+}
+
 hr.small
 {
     border-top: 1px solid lightgray;

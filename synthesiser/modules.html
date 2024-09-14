@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<a id="backButton" href="../index.html">&ltBack&gt</a>
-        <span id="date">01/05/2024</span>
+        <span id="date">14/09/2024</span>
         
 		<header>
 			<h1>Synthesiser Modules</h1>
@@ -69,11 +69,11 @@
 				</ul>
 			</section>
 			<hr class="small"/>
-			<div class="flex">
-				<section id="vco" class="p50">
+			<div class="flex wrap">
+				<section id="vco" class="grid-item">
 					<h2>VCO</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							VCO stands for Voltage Controlled Oscillator.
 							It has both pitch and frequency control, and outputs Saw, Triangle, Sine and Pulse waves (with Pulse Width Modulation).
 							There is also Hard and Soft Sync, which allow for the cycle in the oscilation to be reset with an input pulse.
@@ -86,14 +86,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/vco.JPG"/>
+						<img class="width" src="./images/vco1.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="vclfo" class="p50">
+				<section id="vclfo" class="grid-item">
 					<h2>VCLFO</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The VCLFO module is the same as the VCO module, but its oscillation range has been shifted to lower frequencies, hence the LF in VCLFO.
 							I added a switch to bring the range back up to VCO levels, so that it can be used as one if needed.
 							<br/><br/>
@@ -103,14 +102,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/vclfo.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="vcm" class="p50">
+				<section id="vcm" class="grid-item">
 					<h2>VCM</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							VCM stands for Voltage Controlled Mixer.
 							It has 4 channels, with overall gain and panning.
 							I have not modified the function of this module at all, except for increasing the output gain as I found that it was a little quiet.
@@ -121,14 +119,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/vcm.JPG"/>
+						<img class="width" src="./images/vcm.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="vcf" class="p50">
+				<section id="vcf" class="grid-item">
 					<h2>VCF</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							VCF stands for Voltage Controlled Filter.
 							There are 4 types of these in the synthesiser: Low Pass, High Pass, Band Pass, and Phase Shift.
 							Low pass means that high frequencies are taken away, and low ones let through.
@@ -161,14 +158,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/vcf-lp.JPG"/>
+						<img class="width" src="./images/vcf-lp.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="vcsvf" class="p50">
+				<section id="vcsvf" class="grid-item">
 					<h2>VCSVF</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							VCSVF stands for Voltage Controlled Stage Variable Filter.
 							This is the same as the <a href="#vcf">VCF</a> module, but it has the option to change its filter function.
 							The original design used the CEM 3335 IC, but there is no replacment for that, so I modified the schematic to use the AS 3330 IC.
@@ -179,14 +175,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/vcsvf.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="vca" class="p50">
+				<section id="vca" class="grid-item">
 					<h2>VCA</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							VCA stands for Voltage Controlled Amplifier.
 							The volume fo the input signal is changed based upon the control voltage.
 							It is mainly used in conjuction with an <a href="#vceg">Envelope Generator</a>, to turn on and off notes on the instrument.
@@ -205,14 +200,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/vca.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="vceg" class="p50">
+				<section id="vceg" class="grid-item">
 					<h2>VCEG</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							VCEG stands for Voltage Controled Envelope Generator.
 							This module creates the Attack, Decay, Sustain, and Release stages of each note.
 							It is mainly used to as the control voltage input on <a href="#vca">VCAs</a> or <a href="#vcf">VCFs</a>.
@@ -226,11 +220,10 @@
 						<img class="width" src="./images/vceg.JPG"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="midi" class="p50">
+				<section id="midi" class="grid-item">
 					<h2>MIDI</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The MIDI module is one of the only digital modules in the synthesiser, and fully designed by myself.
 							It takes in a MIDI input and outputs 5 channels of CV and gate.
 							There are options to change how the 5 channels are allocated (number of voices and MIDI channels).
@@ -244,14 +237,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/midi.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="mixer" class="p50">
+				<section id="mixer" class="grid-item">
 					<h2>Stereo Mixer</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Stereo Mixer module is a 3/6 channel mixer.
 							You can mix either 3 stereo channels, or 6 mono channels.
 							There are indicator LEDs for peaking 10Vpp.
@@ -263,14 +255,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/s_mix.JPG"/>
+						<img class="width" src="./images/s_mix.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="drf" class="p50">
+				<section id="drf" class="grid-item">
 					<h2>DRF</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							DRF stands for Dual Resonance Filter.
 							It is a 2 channel parallel band pass filter that can also mix with the original signal.
 							Each band pass filter has voltage control over the frequency and peak volume.
@@ -283,14 +274,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/drf.JPG"/>
+						<img class="width" src="./images/drf1.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="mfeg" class="p50">
+				<section id="mfeg" class="grid-item">
 					<h2>MFEG</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							MFEG stands for Multi-Function Envolope Generator.
 							It is very similar to the <a href="#vceg">VCEG</a>, but does not have voltage control over the envolope timings.
 							It contains 2 independent EGs, and the response of the decay and release has 3 selectable modes.
@@ -301,14 +291,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/mfeg.JPG"/>
+						<img class="width" src="./images/mfeg.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="comp" class="p50">
+				<section id="comp" class="grid-item">
 					<h2>Compressor</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Compressor module schematic was designed by <a href="https://www.youtube.com/@MoritzKlein0">Moritz Klein</a>.
 							A compressor suppresses the volume of a signal when it reaches a certain point.
 							I made one change to this design by adding a mixable sidechain signal into the input of the suppressing circuit.
@@ -319,14 +308,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/comp.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="splashback" class="p50">
+				<section id="splashback" class="grid-item">
 					<h2>Triple Splashback</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Triple Splashback module is a design by <a href="https://www.lookmumnocomputer.com/projects#/2399-triple-splashback">LOOK MUM NO COMPUTER</a>, with the additions made by <a href="https://www.nervoussquirrel.com/modular.html">The Nervious Squirrel</a>.
 							<br/><br/>
 							There are 1 + 1 of these in the synthesiser.<br/>
@@ -340,14 +328,14 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/splashback.JPG"/>
+						<img class="width" src="./images/t_splashback.jpg"/>
+                        <!-- <img class="width" src="./images/d_splashback.jpg"/> -->
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="rm" class="p50">
+				<section id="rm" class="grid-item">
 					<h2>RM</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							RM stands for Ring Modulation.
 							Ring modulation is very similar to amplitude modulation, where the ampltiude of one signal controls the volume of another, however ring modulation also works when the amplitude is negative.
 							It is essentially multiplying the 2 input voltages together to form the output.
@@ -359,14 +347,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/rm.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="wf" class="p50">
+				<section id="wf" class="grid-item">
 					<h2>Wave Folder</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							A wave folder is a type of saturation, but instad of hard clipping at the peak amplitude, it folds back at the peak voltage line.
 							This circuit contains 2 independent circuits, each with 2 wave folding stages, and gain imbetween then.
 							This is another schematic designed by <a href="https://www.youtube.com/@MoritzKlein0">Moritz Klein</a>.
@@ -378,14 +365,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/wave_fold.JPG"/>
+						<img class="width" src="./images/wave_fold.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="reverb" class="p50">
+				<section id="reverb" class="grid-item">
 					<h2>Reverb</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The reverb module is a spring reverb design by myself.
 							Spring reverb is a reverberation enumation technique that uses coil driven springs to send the signal through.
 							Pickup coils at the other end receive the reverberated signal, which is amplified and mixed with the original to control the amount of reverb.
@@ -398,14 +384,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/reverb.JPG"/>
+						<img class="width" src="./images/reverb.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="io" class="p50">
+				<section id="io" class="grid-item">
 					<h2>Output</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Output module is more of an IO (Input Output) module, and another one design by myself.
 							It contains a 1W speaker driver for cabinates or headphones, and a stereo line out.
 							The module also contains 2 inputs, that accept line or instrument signals with a gain range of 0.5 to ~∞.
@@ -417,14 +402,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/io.JPG"/>
+						<img class="width" src="./images/io.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="fx" class="p50">
+				<section id="fx" class="grid-item">
 					<h2>Effect</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Effect module is another IO module, but is designed more for a round trip send and receive.
 							It can be used as another dual line in and dual line out, but is has controls to mix in the input with the outgoing signal.
 							This was mainly designed so that I could use guitar effect pedals with the synthesiser.
@@ -435,14 +419,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/effect.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="volt" class="p50">
+				<section id="volt" class="grid-item">
 					<h2>Voltage</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Voltage module is a fixed voltage source.
 							It has 4 seperate outputs, with a rotary switch to select from 0V - 9V outputs.
 							There is then also a control to add an offset ranging 0V - 1V to the base.
@@ -453,14 +436,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/voltage.JPG"/>
+						<img class="width" src="./images/voltage.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="amp" class="p50">
+				<section id="amp" class="grid-item">
 					<h2>Op Amp</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Op Amp module is more of a voltage subtractor module.
 							It contains 5 isolated circuits, and a gain control on the output.
 							<br/><br/>
@@ -470,14 +452,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/op_amp.JPG"/>
+						<img class="width" src="./images/op_amp.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="sh" class="p50">
+				<section id="sh" class="grid-item">
 					<h2>S&H / Noise</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							S&H stands for Sample and Hold.
 							Upon every input pulse, the voltage at the signal input is sampled, and remains the output voltage until the next pulse.
 							This module also contains a noise source, which has a white, pink and blue output.
@@ -490,14 +471,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/s_h.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="clock" class="p50">
+				<section id="clock" class="grid-item">
 					<h2>Clock</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Clock module is 5 clock pulse sources, with individual controllable pulse rates.
 							It is designed to be mainly used as the clock input on the <a href="#sh">S&H</a> module, but does not have to be.
 							<br/><br/>
@@ -507,14 +487,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/clock.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="split" class="p50">
+				<section id="split" class="grid-item">
 					<h2>Split</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Split module has no circuit.
 							It is a collection of input jacks that are shorted together in groups.
 							The use of this is to split an output so that it can be sent to multiple locations.
@@ -523,14 +502,13 @@
 							Downloads:
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="./images/split.JPG"/>
+						<img class="width" src="./images/split.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="filter" class="p50">
+				<section id="filter" class="grid-item">
 					<h2>Filter</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Filter module is 5 static, single pole, low pass filters.
 							There is only a control to change the cutoff frequency, so no feedback / resonance.
 							This module was designed mainly to add glide to the keyboard, so would be used in conjuction with the <a href="#midi">MIDI</a> module and <a href="#vco">VCO</a> modules.
@@ -542,14 +520,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/filter.jpg"/>
 					</div>
 				</section>
-				<hr class="small"/>
-				<section id="lfo" class="p50">
+				<section id="lfo" class="grid-item">
 					<h2>Quad LFO</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Quad LFO module contains 4 Low Frequency Oscillators.
 							It has a rate control and wave shape selection.
 							This has not been modified from the original design.
@@ -560,14 +537,13 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/quad_lfo.jpg"/>
 					</div>
 				</section>
-				<hr class="small hide"/>
-				<section id="mix" class="p50">
+				<section id="mix" class="grid-item">
 					<h2>Mix</h2>
 					<div class="columns">
-						<p>
+						<p class="small">
 							The Mix module is 5, 4 channel mixers with an output volume control.
 							There is no individual signal volume control, as the module is mainly to be used as a voltage adder.
 							<br/><br/>
@@ -577,7 +553,7 @@
 							<a href="./downloads/" download>Stripboard Layout</a>,
 							<a href="./downloads/" download>Panel Design</a>
 						</p>
-						<img class="width" src="rdf"/>
+						<img class="width" src="./images/mix.jpg"/>
 					</div>
 				</section>
 			</div>
