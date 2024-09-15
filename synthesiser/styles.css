@@ -14,8 +14,15 @@ img.width
 {
     height: 33rem;
     border: 3px solid purple;
-    margin: auto;
     padding: 0px;
+}
+
+.img-block
+{
+    margin: auto;
+    margin-left: 0px;
+    padding: 0px;
+    width: fit-content;
 }
 
 .hide
@@ -23,14 +30,17 @@ img.width
     display: none;
 }
 
-p
-{
-    margin-left: auto;
-    margin-right: auto;
-}
 p.small
 {
+    margin-left: auto;
     max-width: 40ch;
+}
+
+.p-wdith
+{
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wrap
@@ -50,5 +60,15 @@ p.small
     .p50
     {
         width: 100%;
+    }
+    
+    p.small
+    {
+        margin-right: auto;
+    }
+    
+    .img-block
+    {
+        margin-left: auto;
     }
 }
