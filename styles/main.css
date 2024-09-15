@@ -74,6 +74,12 @@ img
     justify-content: space-evenly;
 }
 
+iframe
+{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
 @media only screen and (max-width: 65ch)
 {
     /* For desktop: */
