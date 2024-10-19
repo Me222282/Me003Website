@@ -11,7 +11,7 @@ h1, h2, h3, .sidenote
 {
     text-align: center;
 }
-a:visited
+a, a:visited
 {
     /* never go purple */
     color: blue;
