@@ -29,12 +29,12 @@
 			<section class="p-wdith">
 				<p>
 					I made the decision to build the modules on stripboard instead of custom PCBs, but this has lead to the build process taking longer, and the modules construction to be a little sloppy.
-					However I would not have got as far into construction if I had to find a company to print PCBS, and get them made. It would also have costed a lot more.
+					However practically all modules have had modifications made after the initial construction, which would not have been possible if I was using PCBs. It also costs less to use stripboard.
 					<br/><br/>
 					Nearly all modules have what is called voltage control, which means parameters in the module can be controlled by an external voltage input.
-					This is very common of modular synthesisers and is a core part in how you use it and construct different sounds.
+					This is very common of modular synthesisers and is a core part in how you construct different sounds.
 					<br/><br/>
-					<s>The downloads contain both images and the original files.</s> I used <a href="https://www.kicad.org/">KiCad</a> for the schematics, and <a href="https://www.schaeffer-ag.de/fpd-doc/en/index.htm?fpd_welcome_frontpld.htm">Front Panel Designer</a> for the panel layouts.
+					The schematic downloads contain both pdfs and the original files. I used <a href="https://www.kicad.org/">KiCad</a> for the schematics, and <a href="https://www.schaeffer-ag.de/fpd-doc/en/index.htm?fpd_welcome_frontpld.htm">Front Panel Designer</a> for the panel layouts.
 					<s><i>(info about reading stripboard layouts)</i></s>
 					<br/><br/>
 				</p>
@@ -42,10 +42,10 @@
 				<ul class="hList">
 					<li><a href="#vco">VCO</a></li>
 					<li><a href="#vclfo">VCLFO</a></li>
-					<li><a href="#vcm">VCM</a></li>
 					<li><a href="#vcf">VCF</a></li>
 					<li><a href="#vcsvf">VCSVF</a></li>
 					<li><a href="#vca">VCA</a></li>
+                    <li><a href="#vcm">VCM</a></li>
 					<li><a href="#vceg">VCEG</a></li>
 					<li><a href="#midi">MIDI</a></li>
 					<li><a href="#mixer">Stereo Mixer</a></li>
@@ -82,15 +82,16 @@
 							<br/><br/>
 							There are 10 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vco.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vco1.fpd" download>Panel Design 1</a>,
+                            <a href="./downloads/panels/vco2.fpd" download>Panel Design 2</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/vco1.jpg"><img class="width"
+                            <a href="./images/original/vco1.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vco1.jpg, ./images/medium/vco1.jpg, ./images/original/vco1.jpg"
                                 src="./images/original/vco1.jpg"/></a>
-                            <a href="./images/original/vco2.jpg"><img class="width"
+                            <a href="./images/original/vco2.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vco2.jpg, ./images/medium/vco2.jpg, ./images/original/vco2.jpg"
                                 src="./images/original/vco2.jpg"/></a>
                         </div>
@@ -105,35 +106,14 @@
 							<br/><br/>
 							There are 4 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vclfo.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vclfo.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/vclfo.jpg"><img class="width"
+                            <a href="./images/original/vclfo.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vclfo.jpg, ./images/medium/vclfo.jpg, ./images/original/vclfo.jpg"
                                 src="./images/original/vclfo.jpg"/></a>
-                        </div>
-					</div>
-				</article>
-				<article id="vcm" class="grid-item">
-					<h2>VCM</h2>
-					<div class="columns">
-						<p class="small">
-							VCM stands for Voltage Controlled Mixer.
-							It has 4 channels, with overall gain and panning.
-							I have not modified the function of this module at all, except for increasing the output gain as I found that it was a little quiet.
-							<br/><br/>
-							There are 2 of these in the synthesiser.<br/>
-							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
-						</p>
-                        <div class="img-block">
-                            <a href="./images/original/vcm.jpg"><img class="width"
-                                srcset="./images/small/vcm.jpg, ./images/medium/vcm.jpg, ./images/original/vcm.jpg"
-                                src="./images/original/vcm.jpg"/></a>
                         </div>
 					</div>
 				</article>
@@ -154,36 +134,36 @@
 							<br/><br/>
 							There are 2 of each of these in the synthesiser.<br/>
 							Downloads for Low Pass:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vcf-lp.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vcf-lp.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for High Pass:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vcf-hp.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vcf-hp.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for Band Pass:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vcf-bp.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vcf-bp.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for Phase Shift:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vcf-ps.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vcf-ps.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/vcf-lp.jpg"><img class="width"
+                            <a href="./images/original/vcf-lp.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vcf-lp.jpg, ./images/medium/vcf-lp.jpg, ./images/original/vcf-lp.jpg" 
                                 src="./images/original/vcf-lp.jpg"/>
-                            <!-- <a href="./images/original/vcf-hp.jpg"><img class="width"
+                            <a href="./images/original/vcf-hp.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vcf-hp.jpg, ./images/medium/vcf-hp.jpg, ./images/original/vcf-hp.jpg"
                                 src="./images/original/vcf-hp.jpg"/></a>
-                            <a href="./images/original/vcf-bp.jpg"><img class="width"
+                            <a href="./images/original/vcf-bp.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vcf-bp.jpg, ./images/medium/vcf-bp.jpg, ./images/original/vcf-bp.jpg"
-                                src="./images/original/vcf-bp.jpg"/></a> -->
-                            <a href="./images/original/vcf-ps.jpg"><img class="width"
+                                src="./images/original/vcf-bp.jpg"/></a>
+                            <a href="./images/original/vcf-ps.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vcf-ps.jpg, ./images/medium/vcf-ps.jpg, ./images/original/vcf-ps.jpg"
                                 src="./images/original/vcf-ps.jpg"/></a>
                         </div>
@@ -199,12 +179,12 @@
 							<br/><br/>
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vcsvf.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vcsvf.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/vcsvf.jpg"><img class="width"
+                            <a href="./images/original/vcsvf.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vcsvf.jpg, ./images/medium/vcsvf.jpg, ./images/original/vcsvf.jpg"
                                 src="./images/original/vcsvf.jpg"/></a>
                         </div>
@@ -223,22 +203,43 @@
 							<br/><br/>
 							There are 3 + 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vca.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vca.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for larger version:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/quad_vca.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/quad_vca.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/vca.jpg"><img class="width"
+                            <a href="./images/original/vca.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vca.jpg, ./images/medium/vca.jpg, ./images/original/vca.jpg"
                                 src="./images/original/vca.jpg"/></a>
-                            <a href="./images/original/quad_vca.jpg"><img class="width"
+                            <a href="./images/original/quad_vca.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/quad_vca.jpg, ./images/medium/quad_vca.jpg, ./images/original/quad_vca.jpg"
                                 src="./images/original/quad_vca.jpg"/></a>
+                        </div>
+					</div>
+				</article>
+                <article id="vcm" class="grid-item">
+					<h2>VCM</h2>
+					<div class="columns">
+						<p class="small">
+							VCM stands for Voltage Controlled Mixer.
+							It has 4 channels, with overall gain and panning.
+							I have not modified the function of this module at all, except for increasing the output gain as I found that it was a little quiet.
+							<br/><br/>
+							There are 2 of these in the synthesiser.<br/>
+							Downloads:
+							<a href="./downloads/schematics/vcm.zip" download>Schematic</a>,
+							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/panels/vcm.fpd" download>Panel Design</a>
+						</p>
+                        <div class="img-block">
+                            <a href="./images/original/vcm.jpg" target="_blank"><img class="width"
+                                srcset="./images/small/vcm.jpg, ./images/medium/vcm.jpg, ./images/original/vcm.jpg"
+                                src="./images/original/vcm.jpg"/></a>
                         </div>
 					</div>
 				</article>
@@ -252,12 +253,12 @@
 							<br/><br/>
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/vceg.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/vceg.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/vceg.jpg"><img class="width"
+                            <a href="./images/original/vceg.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/vceg.jpg, ./images/medium/vceg.jpg, ./images/original/vceg.jpg"
                                 src="./images/original/vceg.jpg"/></a>
                         </div>
@@ -273,15 +274,17 @@
 							You can also change how far the pitch bend goes, and octave offsets to the pitch.
 							There are switches to change note priorities when the maximum selected voices has been reached.
 							It also has outputs for velecity and the modulation wheel.
+                            When developing <a href="https://github.com/Me222282/ArduinoMidi" download>the code</a> for this module, I went a bit excessive on the feature set.
+                            Because of this it is the only module I made a <a href="./downloads/Midi Manual.pdf" download>specific manual</a> for.
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/midi.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/midi.fpd" download>Panel Design</a>,
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/midi.jpg"><img class="width"
+                            <a href="./images/original/midi.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/midi.jpg, ./images/medium/midi.jpg, ./images/original/midi.jpg"
                                 src="./images/original/midi.jpg"/></a>
                         </div>
@@ -298,12 +301,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/s_mix.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/s_mix.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/s_mix.jpg"><img class="width"
+                            <a href="./images/original/s_mix.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/s_mix.jpg, ./images/medium/s_mix.jpg, ./images/original/s_mix.jpg"
                                 src="./images/original/s_mix.jpg"/></a>
                         </div>
@@ -321,15 +324,16 @@
 							<br/><br/>
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/drf.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/drf1.fpd" download>Panel Design 1</a>
+                            <a href="./downloads/panels/drf2.fpd" download>Panel Design 2</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/drf1.jpg"><img class="width"
+                            <a href="./images/original/drf1.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/drf1.jpg, ./images/medium/drf1.jpg, ./images/original/drf1.jpg"
                                 src="./images/original/drf1.jpg"/></a>
-                            <a href="./images/original/drf2.jpg"><img class="width"
+                            <a href="./images/original/drf2.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/drf2.jpg, ./images/medium/drf2.jpg, ./images/original/drf2.jpg"
                                 src="./images/original/drf2.jpg"/></a>
                         </div>
@@ -345,12 +349,12 @@
 							<br/><br/>
 							There are 3 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/mfeg.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/mfeg.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/mfeg.jpg"><img class="width"
+                            <a href="./images/original/mfeg.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/mfeg.jpg, ./images/medium/mfeg.jpg, ./images/original/mfeg.jpg"
                                 src="./images/original/mfeg.jpg"/></a>
                         </div>
@@ -366,12 +370,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/comp.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/comp.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/comp.jpg"><img class="width"
+                            <a href="./images/original/comp.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/comp.jpg, ./images/medium/comp.jpg, ./images/original/comp.jpg"
                                 src="./images/original/comp.jpg"/></a>
                         </div>
@@ -382,23 +386,24 @@
 					<div class="columns">
 						<p class="small">
 							The Triple Splashback module is a design by <a href="https://www.lookmumnocomputer.com/projects#/2399-triple-splashback">LOOK MUM NO COMPUTER</a>, with the additions made by <a href="https://www.nervoussquirrel.com/modular.html">The Nervious Squirrel</a>.
+                            I also made some modifications of my own so that the mix and feedback knobs behave more like I would expect. This however can cause it to be quite quiet.
 							<br/><br/>
 							There are 1 + 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/t_splashback.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/t_splashback.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for dual version:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/d_splashback.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/d_splashback.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/t_splashback.jpg"><img class="width"
+                            <a href="./images/original/t_splashback.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/t_splashback.jpg, ./images/medium/t_splashback.jpg, ./images/original/t_splashback.jpg"
                                 src="./images/original/t_splashback.jpg"/></a>
-                            <a href="./images/original/d_splashback.jpg"><img class="width"
+                            <a href="./images/original/d_splashback.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/d_splashback.jpg, ./images/medium/d_splashback.jpg, ./images/original/d_splashback.jpg"
                                 src="./images/original/d_splashback.jpg"/></a>
                         </div>
@@ -415,12 +420,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/rm.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/rm.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/rm.jpg"><img class="width"
+                            <a href="./images/original/rm.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/rm.jpg, ./images/medium/rm.jpg, ./images/original/rm.jpg"
                                 src="./images/original/rm.jpg"/></a>
                         </div>
@@ -437,12 +442,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/wave_fold.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/wave_fold.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/wave_fold.jpg"><img class="width"
+                            <a href="./images/original/wave_fold.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/wave_fold.jpg, ./images/medium/wave_fold.jpg, ./images/original/wave_fold.jpg"
                                 src="./images/original/wave_fold.jpg"/></a>
                         </div>
@@ -460,12 +465,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/reverb.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/reverb.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/reverb.jpg"><img class="width"
+                            <a href="./images/original/reverb.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/reverb.jpg, ./images/medium/reverb.jpg, ./images/original/reverb.jpg"
                                 src="./images/original/reverb.jpg"/></a>
                         </div>
@@ -482,12 +487,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/io.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/io.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/io.jpg"><img class="width"
+                            <a href="./images/original/io.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/io.jpg, ./images/medium/io.jpg, ./images/original/io.jpg"
                                 src="./images/original/io.jpg"/></a>
                         </div>
@@ -503,12 +508,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/effect.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/effect.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/effect.jpg"><img class="width"
+                            <a href="./images/original/effect.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/effect.jpg, ./images/medium/effect.jpg, ./images/original/effect.jpg"
                                 src="./images/original/effect.jpg"/></a>
                         </div>
@@ -524,12 +529,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/voltage.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/voltage.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/voltage.jpg"><img class="width"
+                            <a href="./images/original/voltage.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/voltage.jpg, ./images/medium/voltage.jpg, ./images/original/voltage.jpg"
                                 src="./images/original/voltage.jpg"/></a>
                         </div>
@@ -544,12 +549,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/op_amp.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/op_amp.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/op_amp.jpg"><img class="width"
+                            <a href="./images/original/op_amp.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/op_amp.jpg, ./images/medium/op_amp.jpg, ./images/original/op_amp.jpg"
                                 src="./images/original/op_amp.jpg"/></a>
                         </div>
@@ -567,12 +572,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/s_h.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/s_h.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/s_h.jpg"><img class="width"
+                            <a href="./images/original/s_h.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/s_h.jpg, ./images/medium/s_h.jpg, ./images/original/s_h.jpg"
                                 src="./images/original/s_h.jpg"/></a>
                         </div>
@@ -587,12 +592,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/clock.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/clock.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/clock.jpg"><img class="width"
+                            <a href="./images/original/clock.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/clock.jpg, ./images/medium/clock.jpg, ./images/original/clock.jpg"
                                 src="./images/original/clock.jpg"/></a>
                         </div>
@@ -608,10 +613,10 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/split.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/split.jpg"><img class="width"
+                            <a href="./images/original/split.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/split.jpg, ./images/medium/split.jpg, ./images/original/split.jpg"
                                 src="./images/original/split.jpg"/></a>
                         </div>
@@ -628,12 +633,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/filter.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/filter.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/filter.jpg"><img class="width"
+                            <a href="./images/original/filter.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/filter.jpg, ./images/medium/filter.jpg, ./images/original/filter.jpg"
                                 src="./images/original/filter.jpg"/></a>
                         </div>
@@ -649,12 +654,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/quad_lfo.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/quad_lfo.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/quad_lfo.jpg"><img class="width"
+                            <a href="./images/original/quad_lfo.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/quad_lfo.jpg, ./images/medium/quad_lfo.jpg, ./images/original/quad_lfo.jpg"
                                 src="./images/original/quad_lfo.jpg"/></a>
                         </div>
@@ -669,12 +674,12 @@
 							<br/><br/>
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
-							<a href="./downloads/" download>Schematic</a>,
+							<a href="./downloads/schematics/mix.zip" download>Schematic</a>,
 							<a href="./downloads/" download>Stripboard Layout</a>,
-							<a href="./downloads/" download>Panel Design</a>
+							<a href="./downloads/panels/mix.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
-                            <a href="./images/original/mix.jpg"><img class="width"
+                            <a href="./images/original/mix.jpg" target="_blank"><img class="width"
                                 srcset="./images/small/mix.jpg, ./images/medium/mix.jpg, ./images/original/mix.jpg"
                                 src="./images/original/mix.jpg"/></a>
                         </div>
