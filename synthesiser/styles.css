@@ -12,9 +12,12 @@
 
 img.width
 {
-    height: 33rem;
+    max-height: 33rem;
+    min-height: 33rem;
     border: 3px solid purple;
     padding: 0px;
+    display: inline-block;
+    margin: auto;
 }
 
 .img-block
@@ -70,5 +73,11 @@ p.small
     .img-block
     {
         margin-left: auto;
+        width: min-content;
+    }
+    
+    img.l-width
+    {
+        min-height: 23rem;
     }
 }

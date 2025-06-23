@@ -80,8 +80,14 @@ h3
 
 ul.hList > li
 {
-    float: left;
+    /* float: left; */
+    display: inline-block;
     padding-right: 3em;
+}
+ul.hList > li:before{
+    content: "";
+    display: list-item;
+    position: absolute;
 }
 
 @media only screen and (max-width: 100ch)
