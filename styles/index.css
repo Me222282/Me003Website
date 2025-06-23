@@ -17,3 +17,9 @@ img.small
     margin-right: auto;
     border-radius: 6.25vh;
 }
+
+.thumbnail.even
+{
+    object-fit: cover;
+    aspect-ratio: 66 / 47;
+}

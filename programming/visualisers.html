@@ -9,7 +9,7 @@
 	</head>
 	<body>
         <a id="backButton" href="./index.html">&ltBack&gt</a>
-        <span id="date">01/05/2024</span>
+        <span id="date">23/06/2025</span>
         
 		<header>
 			<h1>Visualisers</h1>
@@ -56,7 +56,7 @@
                         <br/><br/>
                         The control scheme:
                         <br/>
-                        <span><b>Entre</b> - Add entered node;</span>
+                        <span><b>Enter</b> - Add entered node;</span>
                         <span><b>DEL</b> - Remove entered node;</span>
                         <span><b>Ctrl + F</b> - Find entered node;</span>
                         <span><b>Ctrl + R</b> - Add a random node;</span>
@@ -71,7 +71,45 @@
                             <a href="./downloads/Win-BinarySearchTree.zip" download>Windows</a>,
                             <a href="./downloads/Linux-BinarySearchTree.zip" download>Linux</a>
                     </p>
-                    <img class="small" src="../thumbnails/visualisers.png" />
+                    <img class="small" src="./images/BinarySearchTree.png" />
+                </div>
+            </section>
+            <hr class="small"/>
+            <section>
+                <h2>Mandelbrot Set</h2>
+                <div class="columns">
+                    <p>
+                        This is a simple mandelbrot set renderer that uses the GPU to perform the calculations.
+                        It has the classic histogram colouring, which is currently done single threaded on the CPU due to needing shared write data.
+                        I took the main implementation of the histogram from a stackoverflow user answering <a href="https://stackoverflow.com/questions/53658296/mandelbrot-set-color-spectrum-suggestions/53666890#53666890">this question</a>.
+                        Without the histogram rendering, the visual is the raw output of the GPU processing which is the iteration count encoded into the colour.
+                        The images shown are the same spot with and without histogram respectively.
+                        <br/><br/>
+                        In the corner of the screen are displayed the max iterations, the current zoom and the current frame time in seconds.
+                        On my computer, I can roughly get maximum zoom of 2×10<sup>14</sup> before the resultion clearly degrades.
+                        I expect this is due to the precision of the double so I doubt any other graphics card could go any higher.
+                        <br/><br/>
+                        The control scheme:
+                        <br/>
+                        <span><b>Esc</b> - Close program;</span>
+                        <span><b>BSP</b> - Animate back to centre with no zoom;</span>
+                        <span><b>Alt + BSP</b> - Animate just zooming out;</span>
+                        <span><b>H</b> - Toggle histogram processing;</span>
+                        <span><b>R</b> - Match rendering size to window size;</span>
+                        <span><b>=/-</b> - Increase/decrease base max iterations;</span>
+                        <span><b>Shift</b> - Zoom/animate at 2 * speed;</span>
+                        <span><b>Left Mouse</b> - Pan view;</span>
+                        <span><b>Middle Mouse</b> - Smoothly zoom;</span>
+                        <span><b>Scroll</b> - Zoom;</span>
+                        <br/><br/>
+                        <a href="https://github.com/Me222282/Mandelbrot">Source code</a>
+                        <br/><br/>
+                        Download binaries:
+                            <a href="./downloads/Win-Mandelbrot.zip" download>Windows</a>,
+                            <a href="./downloads/Linux-Mandelbrot.zip" download>Linux</a>
+                    </p>
+                    <img class="extra-small" src="./images/Mandelbrot2.png" />
+                    <img class="extra-small" src="./images/Mandelbrot2NoHist.png" />
                 </div>
             </section>
 		</main>
