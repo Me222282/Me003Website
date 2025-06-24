@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<a id="backButton" href="../index.html">&ltBack&gt</a>
-        <span id="date">22/06/2025</span>
+        <span id="date">24/06/2025</span>
         
 		<header>
 			<h1>Synthesiser Modules</h1>
@@ -29,13 +29,23 @@
 			<section class="p-wdith">
 				<p>
 					I made the decision to build the modules on stripboard instead of custom PCBs, but this has lead to the build process taking longer, and the modules construction to be a little sloppy.
-					However practically all modules have had modifications made after the initial construction, which would not have been possible if I was using PCBs. It also costs less to use stripboard.
+					However practically all modules have had modifications made after the initial construction, which would not have been possible if I was using PCBs.
+                    It also costs less to use stripboard.
+                    Although, if you plan on building these yourself, I would recommend using proper pcbs and pcb designs.
 					<br/><br/>
 					Nearly all modules have what is called voltage control, which means parameters in the module can be controlled by an external voltage input.
 					This is very common of modular synthesisers and is a core part in how you construct different sounds.
 					<br/><br/>
+                    Most of the modules schematic designs are based on the Digisound80, the original documents of which can be found <a href="http://www.digisound80.co.uk/digisound/modules/modules.htm">here</a>.
 					The schematic downloads contain both pdfs and the original files. I used <a href="https://www.kicad.org/">KiCad</a> for the schematics, and <a href="https://www.schaeffer-ag.de/fpd-doc/en/index.htm?fpd_welcome_frontpld.htm">Front Panel Designer</a> for the panel layouts.
-					<s><i>(info about reading stripboard layouts)</i></s>
+					The stripboard layouts are the pcb files associated with the schematics.
+                    Red tracks are the copper of the stripbarod, Blue tracks are jumper wires, Green is usally a solder bridge and Orange are under or over board jumpers.
+                    Some designs use green to mean under and over connections as well, due to overlapping wires.
+                    <br/><br/>
+                    Most of the stripboard layouts are very cramped, and can be quite difficult to build.
+                    This was mostly to save the amount of stripboard I needed as well as the surface area of copper per connection to reduce effects from external noise.
+                    As I did not have a geat understanding of electronics at the time I desgined most of these, the filtering capacitors are not in particularly useful locations.
+                    Overall I would suggest not using these stripboard layouts if you plan on building some, but downloads are available anyway.
 					<br/><br/>
 				</p>
 				<strong>Module list:</strong>
@@ -83,7 +93,7 @@
 							There are 10 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/vco.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vco.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vco1.fpd" download>Panel Design 1</a>,
                             <a href="./downloads/panels/vco2.fpd" download>Panel Design 2</a>
 						</p>
@@ -107,7 +117,7 @@
 							There are 4 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/vclfo.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vclfo.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vclfo.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -135,22 +145,22 @@
 							There are 2 of each of these in the synthesiser.<br/>
 							Downloads for Low Pass:
 							<a href="./downloads/schematics/vcf-lp.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vcf-lp.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vcf-lp.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for High Pass:
 							<a href="./downloads/schematics/vcf-hp.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vcf-bp.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vcf-hp.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for Band Pass:
 							<a href="./downloads/schematics/vcf-bp.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vcf-bp.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vcf-bp.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for Phase Shift:
 							<a href="./downloads/schematics/vcf-ps.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vcf-ps.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vcf-ps.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -180,7 +190,7 @@
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/vcsvf.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vcsvf.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vcsvf.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -204,12 +214,12 @@
 							There are 3 + 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/vca.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vca.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vca.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for larger version:
 							<a href="./downloads/schematics/quad_vca.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/quad_vca.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/quad_vca.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -233,7 +243,7 @@
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/vcm.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vcm.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vcm.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -254,7 +264,7 @@
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/vceg.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/vceg.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/vceg.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -280,7 +290,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/midi.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/midi.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/midi.fpd" download>Panel Design</a>,
 						</p>
                         <div class="img-block">
@@ -302,7 +312,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/s_mix.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/s_mix.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/s_mix.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -325,7 +335,7 @@
 							There are 2 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/drf.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/drf.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/drf1.fpd" download>Panel Design 1</a>
                             <a href="./downloads/panels/drf2.fpd" download>Panel Design 2</a>
 						</p>
@@ -350,7 +360,7 @@
 							There are 3 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/mfeg.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/mfeg.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/mfeg.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -371,7 +381,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/comp.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/comp.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/comp.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -391,12 +401,12 @@
 							There are 1 + 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/t_splashback.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/t_splashback.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/t_splashback.fpd" download>Panel Design</a>
 							<br/>
 							Downloads for dual version:
 							<a href="./downloads/schematics/d_splashback.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/d_splashback.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/d_splashback.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -421,7 +431,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/rm.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/rm.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/rm.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -443,7 +453,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/wave_fold.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/wave_fold.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/wave_fold.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -466,7 +476,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/reverb.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/reverb.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/reverb.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -488,7 +498,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/io.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/io.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/io.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -509,7 +519,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/effect.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/effect.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/effect.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -530,7 +540,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/voltage.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/voltage.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/voltage.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -550,7 +560,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/op_amp.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/op_amp.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/op_amp.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -573,7 +583,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/s_h.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/s_h.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/s_h.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -593,7 +603,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/clock.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/clock.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/clock.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -634,7 +644,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/filter.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/filter.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/filter.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -655,7 +665,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/quad_lfo.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/quad_lfo.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/quad_lfo.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
@@ -675,7 +685,7 @@
 							There is 1 of these in the synthesiser.<br/>
 							Downloads:
 							<a href="./downloads/schematics/mix.zip" download>Schematic</a>,
-							<a href="./downloads/" download>Stripboard Layout</a>,
+							<a href="./downloads/stripboards/mix.zip" download>Stripboard Layout</a>,
 							<a href="./downloads/panels/mix.fpd" download>Panel Design</a>
 						</p>
                         <div class="img-block">
