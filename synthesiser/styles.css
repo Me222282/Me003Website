@@ -28,6 +28,12 @@ img.width
     width: fit-content;
 }
 
+article.columns
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 .hide
 {
     display: none;
@@ -39,9 +45,9 @@ p.small
     max-width: 40ch;
 }
 
-.p-wdith
+.p-width
 {
-    max-width: 70em;
+    max-width: 120ch;
     margin-left: auto;
     margin-right: auto;
 }

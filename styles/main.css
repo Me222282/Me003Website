@@ -31,7 +31,8 @@ header > h1
 
 p
 {
-    max-width: 70em;
+    /* max-width: 70em; */
+    max-width: 120ch;
 }
 
 hr.small
@@ -77,7 +78,7 @@ img
 
 iframe
 {
-    width: 100%;
+    /* width: 100%; */
     aspect-ratio: 16 / 9;
 }
 
