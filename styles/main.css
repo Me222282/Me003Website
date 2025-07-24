@@ -80,6 +80,8 @@ iframe
 {
     /* width: 100%; */
     aspect-ratio: 16 / 9;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 65ch)
